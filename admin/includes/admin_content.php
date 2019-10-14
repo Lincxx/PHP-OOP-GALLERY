@@ -9,14 +9,17 @@
                         </h1>
 
                         <?php 
-                            $user = new User();
-                            $result_set = $user->find_all_user();
+                            // $user = new User();
+                            // $result_set = $user->find_all_user();
 
-                            while($row = mysqli_fetch_assoc($result_set)) {
-                                echo $row['username'] . "<br>";
-                            }
+                            // while($row = mysqli_fetch_assoc($result_set)) {
+                            //     echo $row['username'] . "<br>";
+                            // }
+                            //Changing the above to uae Static method
+                             $user = User::find_user_by_id(1);
 
                             
+                                echo $user['username'] . "<br>";
                             
 
                         ?>
